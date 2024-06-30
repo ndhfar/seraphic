@@ -5,8 +5,25 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main className="space-y-4 ">
-      <h1 className="text-2xl font-semibold text-center">Hello Again!</h1>
+      <div className="text-center">
+        <h1 className="text-2xl font-semibold">Create an account.</h1>
+        <p className="text-xs">
+          Already have an account? {""}
+          <Link
+            href="/login"
+            className="text-[#0075c2] hover:text-[#004877] font-semibold"
+          >
+            Log In
+          </Link>
+        </p>
+      </div>
       <form action="" className="space-y-2">
+        <InputTemplate
+          label="Username"
+          name="username"
+          type="text"
+          icon="bx-user"
+        />
         <InputTemplate
           label="Email"
           name="email"
@@ -20,20 +37,11 @@ export default function Page() {
           icon="bx-lock"
         />
         <div>
-          <button className="mt-2 w-full btn btn-neutral btn-sm">
+          <button className="my-2 w-full btn btn-neutral btn-sm">
             Register
           </button>
         </div>
       </form>
-      <p className="text-xs text-center">
-        Don&apos;t have an account? {""}
-        <Link
-          href="/register"
-          className="text-[#0075c2] hover:text-[#004877] font-semibold"
-        >
-          Register
-        </Link>
-      </p>
     </main>
   );
 }

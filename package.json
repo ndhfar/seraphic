@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@prisma/client": "^5.16.1",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^9.0.2",
     "next": "15.0.0-canary.44",
     "prisma": "^5.16.1",
     "react": "19.0.0-rc.0",

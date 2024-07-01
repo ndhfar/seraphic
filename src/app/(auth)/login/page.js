@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -20,13 +20,11 @@ export default function Page() {
           icon="bx-lock"
         />
         <div>
-          <button className="mt-2 w-full btn btn-neutral btn-sm">
-            Register
-          </button>
+          <button className="mt-2 w-full btn btn-neutral btn-sm">Login</button>
         </div>
       </form>
       <p className="text-xs text-center">
-        Don&apos;t have an account? {""}
+        Don&apos;t have an account? {''}
         <Link
           href="/register"
           className="text-[#0075c2] hover:text-[#004877] font-semibold"

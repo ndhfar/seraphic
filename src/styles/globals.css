@@ -2,10 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+#smcontainer {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+}
+#card1 {
+  @apply border p-8 rounded-xl shadow-sm shadow-slate-800 border-solid;
+}
+
+#card2 {
+  @apply p-8 rounded-xl shadow-lg shadow-slate-800;
+=======
 @layer base {
   input,
   textarea,
   select {
     @apply block w-full rounded-lg border px-3 py-2;
   }
+>>>>>>> main
 }

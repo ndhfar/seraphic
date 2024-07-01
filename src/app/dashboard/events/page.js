@@ -1,7 +1,7 @@
-import { prisma } from '@/utils/prisma';
-import { auth } from '@/lib/auth';
-import { EventCard } from '@/components/eventCard';
-import React from 'react';
+import { prisma } from "@/utils/prisma";
+import { auth } from "@/lib/auth";
+import { EventCard } from "@/components/eventCard";
+import React from "react";
 
 export default async function Page() {
   const user = await auth();

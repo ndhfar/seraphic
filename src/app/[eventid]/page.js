@@ -24,8 +24,7 @@ export default async function Page({ params }) {
           <div className="px-4">
             <h1 className="font-bold text-5xl pt-2">{event.title}</h1>
             <p>
-              <span className="font-semibold">Author:</span>{" "}
-              {event.author.username}
+              <span className="font-semibold">Author:</span> {event.author.username}
             </p>
             <p className="mt-2 text-sm md:text-base">{event.description}</p>
             <div className="text-sm mt-3 md:text-base">

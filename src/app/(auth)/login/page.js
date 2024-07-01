@@ -1,10 +1,8 @@
-'use client';
-
+"use client";
 
 import Link from "next/link";
 import { useActionState } from "react";
 import LoginAction from "./action";
-
 
 export default function Page() {
   const [state, formAction, pending] = useActionState(LoginAction, null);
@@ -13,42 +11,20 @@ export default function Page() {
     <main className="space-y-4 ">
       <h1 className="text-2xl font-semibold text-center">Hello Again!</h1>
       <form action={formAction} className="space-y-2">
-        <InputTemplate
-          label="Email"
-          name="email"
-          type="email"
-          icon="bx-envelope"
-          value={state?.data?.email}
-        />
-        <InputTemplate
-          label="Password"
-          name="password"
-          type="password"
-          icon="bx-lock"
-          value={state?.data?.password}
-        />
+        <InputTemplate label="Email" name="email" type="email" icon="bx-envelope" value={state?.data?.email} />
+        <InputTemplate label="Password" name="password" type="password" icon="bx-lock" value={state?.data?.password} />
         <div>
-          <button
-            className="mt-2 w-full btn btn-neutral btn-sm"
-            disabled={pending}
-          >
+          <button className="mt-2 w-full btn btn-neutral btn-sm" disabled={pending}>
             Log In
           </button>
         </div>
 
-        {state?.status === "failed" ? (
-          <StatusTemplate status="failed" message={state.message} />
-        ) : null}
-        {state?.status === "success" ? (
-          <StatusTemplate status="success" message={state.message} />
-        ) : null}
+        {state?.status === "failed" ? <StatusTemplate status="failed" message={state.message} /> : null}
+        {state?.status === "success" ? <StatusTemplate status="success" message={state.message} /> : null}
       </form>
       <p className="text-xs text-center">
-        Don&apos;t have an account? {''}
-        <Link
-          href="/register"
-          className="text-[#0075c2] hover:text-[#004877] font-semibold"
-        >
+        Don&apos;t have an account? {""}
+        <Link href="/register" className="text-[#0075c2] hover:text-[#004877] font-semibold">
           Register
         </Link>
       </p>
@@ -76,16 +52,8 @@ const InputTemplate = ({ label, name, type, icon, value }) => {
 
 const StatusTemplate = ({ status, message }) => {
   if (status === "failed") {
-    return (
-      <p className="bg-red-100 text-red-500 text-center py-1 text-sm">
-        {message}
-      </p>
-    );
+    return <p className="bg-red-100 text-red-500 text-center py-1 text-sm">{message}</p>;
   } else if (status === "success") {
-    return (
-      <p className="bg-green-100 text-green-500 text-center py-1 text-sm">
-        {message}
-      </p>
-    );
+    return <p className="bg-green-100 text-green-500 text-center py-1 text-sm">{message}</p>;
   }
 };

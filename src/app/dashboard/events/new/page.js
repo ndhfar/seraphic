@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useActionState } from 'react';
-import { createEventAction } from './action';
-import React from 'react';
+import { useActionState } from "react";
+import { createEventAction } from "./action";
+import React from "react";
 
 export default function Page() {
   const [formAction, pending, state] = useActionState(createEventAction, null);
@@ -18,18 +18,11 @@ export default function Page() {
             <form action={formAction} className="space-y-5">
               <div>
                 <p className="text-sm text-slate-700">Title</p>
-                <input
-                  name="title"
-                  placeholder="title"
-                  className="input input-bordered w-full"
-                />
+                <input name="title" placeholder="title" className="input input-bordered w-full" />
               </div>
               <div>
                 <p className="text-sm text-slate-700">Location</p>
-                <select
-                  name="location"
-                  className="select select-bordered w-full"
-                >
+                <select name="location" className="select select-bordered w-full">
                   <option>Malang</option>
                   <option>Jakarta</option>
                   <option>Yogyakarta</option>
@@ -42,12 +35,7 @@ export default function Page() {
               </div>
               <div>
                 <p className="text-sm text-slate-700">Description</p>
-                <textarea
-                  name="description"
-                  placeholder="description"
-                  rows={4}
-                  className="textarea textarea-bordered w-full"
-                />
+                <textarea name="description" placeholder="description" rows={4} className="textarea textarea-bordered w-full" />
               </div>
               <div className="pt-3 flex justify-end">
                 <button disabled={pending} className="btn btn-neutral">
@@ -55,12 +43,8 @@ export default function Page() {
                 </button>
               </div>
               <div className="pt-3">
-                {!state?.success && state?.message && (
-                  <p className="text-red-500">{state?.message}</p>
-                )}
-                {state?.success && (
-                  <p className="text-green-500">{state?.message}</p>
-                )}
+                {!state?.success && state?.message && <p className="text-red-500">{state?.message}</p>}
+                {state?.success && <p className="text-green-500">{state?.message}</p>}
               </div>
             </form>
           </div>

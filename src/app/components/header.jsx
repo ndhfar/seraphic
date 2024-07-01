@@ -13,7 +13,7 @@ export const Header = async () => {
       <div className="flex items-center font-normal gap-8">
         <>
           <Link href="/login">
-            <div>Log in</div>
+            <div className="text-gray-400">Log in</div>
           </Link>
           <Link href="/register">
             <button className="rounded-full font-semibold bg-gray-900 px-4 py-2 text-white">

@@ -1,8 +1,10 @@
-"use client";
+'use client';
+
 
 import Link from "next/link";
 import { useActionState } from "react";
 import LoginAction from "./action";
+
 
 export default function Page() {
   const [state, formAction, pending] = useActionState(LoginAction, null);
@@ -42,7 +44,7 @@ export default function Page() {
         ) : null}
       </form>
       <p className="text-xs text-center">
-        Don&apos;t have an account? {""}
+        Don&apos;t have an account? {''}
         <Link
           href="/register"
           className="text-[#0075c2] hover:text-[#004877] font-semibold"

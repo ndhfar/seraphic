@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 
 import Link from "next/link";
 import RegisterAction from "./action";
@@ -12,7 +13,7 @@ export default function Page() {
       <div className="text-center">
         <h1 className="text-2xl font-semibold">Create an account.</h1>
         <p className="text-xs">
-          Already have an account? {""}
+          Already have an account? {''}
           <Link
             href="/login"
             className="text-[#0075c2] hover:text-[#004877] font-semibold"

@@ -24,25 +24,25 @@ export default function Home() {
           <section className="flex flex-col items-center space-y-20">
             <section className="grid grid-cols-4 items-center gap-4">
               <div id="card2" className="flex flex-col items-center space-y-4">
-                <div className="px-6 py-6 border border-solid border-white rounded-full bg-slate-900">
+                <div className="px-6 py-6 border border-solid border-white rounded-full">
                   <Buildings color="white" size={40} iconStyle="Bold" />
                 </div>
                 <h4 className="flex-grow text-gray-200">Responsive Design</h4>
               </div>
               <div id="card2" className="flex flex-col items-center space-y-4">
-                <div className="px-6 py-6 border border-solid border-white rounded-full bg-slate-900">
+                <div className="px-6 py-6 border border-solid border-white rounded-full">
                   <Sun color="white" size={40} iconStyle="Bold" />
                 </div>
                 <h4 className="flex-grow text-gray-200">Cloud Integration</h4>
               </div>
               <div id="card2" className="flex flex-col items-center space-y-4">
-                <div className="px-6 py-6 border border-solid border-white rounded-full bg-slate-900">
+                <div className="px-6 py-6 border border-solid border-white rounded-full">
                   <Chart color="white" size={40} iconStyle="Bold" />
                 </div>
                 <h4 className="flex-grow text-gray-200">Advanced Analytics</h4>
               </div>
               <div id="card2" className="flex flex-col items-center space-y-4">
-                <div className="px-6 py-6 border border-solid border-white rounded-full bg-slate-900">
+                <div className="px-6 py-6 border border-solid border-white rounded-full">
                   <Star2 color="white" size={40} iconStyle="Bold" />
                 </div>
                 <h4 className="flex-grow text-gray-200">
@@ -50,6 +50,9 @@ export default function Home() {
                 </h4>
               </div>
             </section>
+            <button className="p-4 bg-white rounded-full font-semibold text-purple-800 hover:bg-purple-800 hover:text-white transition duration-300">
+              Register your event now
+            </button>
           </section>
         </div>
       </main>
